@@ -39,14 +39,15 @@ const api = new Api("leo");
 let catId;
 $container.addEventListener("click", (event)=>{
   catId = event.target.closest(".card").dataset.card_id; 
+  console.log(catId);
 });
 
-
+let dataCat;
 //функция заполняющая html элемент с подробной информацией 
 async function showCat(id){
 
     let currentData = await (await api.getCat(id)).json();
-    
+    dataCat = currentData;
     document.querySelector(".current-image").setAttribute("src", currentData.image);
     document.querySelector("#currentName").innerHTML = currentData.name;
 
@@ -161,8 +162,15 @@ let $closeEditBtn = document.querySelector("[data-edbtnclose]");
 
 
 $editBatton.addEventListener("click", (event)=> {
-    
+    showCat(catId);
     document.querySelector(".modal-Edit").classList.remove("hidden");
+    //---
+    Object.keys(dataCat).forEach((key) => {
+        document.forms.catsEditForm[key].value = dataCat[key];
+    });
+    //-----
+    console.log(dataCat);
+
 });
 
 $closeEditBtn.addEventListener("click", (event)=>{
