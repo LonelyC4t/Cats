@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleapi.css">
+</head>
+<body>
+    <div class="ad"><button>AddCat</button></div>
+    <div class="container">
+        <h2>Cat Storm</h2>
+        <div data-cat="" class="wraper">
+
+        </div>
+    </div>
+
+    <div class="modal-show hidden">
+        
+        <div class="show-container">
+            <div class="show-image">
+                <img class="current-image" src="" alt="">
+            </div>
+            <div class="show-desription">
+                <div class = "catName">
+                    <p class="desText">Имя:</p>
+                    <p class="dataText" id="currentName"></p>
+                </div>
+                <div class="catAge">
+                    <p class="desText">Возраст:</p>
+                    <p class="dataText" id="currentAge"></p>
+                </div>
+                <div class="catDescription">
+                    <p class="desText">Описание</p>
+                    <p class="dataText" id="currentDesc"></p>
+                </div>
+                <div class="milk" >
+                    <p class="dataText" id="LikeMilk"></p>
+                </div>
+
+                <div class="fish">
+                    <p class="dataText" id="currentFish"></p>
+                    <button data-editBatton="" class="btn" style="margin-left: 200px;">Edit</button>
+                </div>
+            </div>
+            <button data-showClose="" class="btn-close">╳</button>
+        </div>
+        
+    </div>
+
+    <div class="modalErr hidden">
+        <img class="imgErr" src="https://aroundpet.ru/wp-content/uploads/kak-otuchit-kota-gryzt-provoda-1170x767.jpg" alt="">
+        <h2>Сервер временно не отвечает, повторите запрос позже</h2>
+        <button class="btn">Закрыть</button>
+    </div>
+    
+    <div class="modal-container hidden">
+        <div class="modal-wrapper">
+            <form name="catsForm" class="form" action="">
+                <input name="id" placeholder="Id" class="form-modal" type="number">
+                <input name="name" placeholder="Name" class="form-modal" type="text">
+                <input name="image" placeholder="URL" class="form-modal" type="text">
+                <input name="age" placeholder="Age" class="form-modal" type="number">
+                <input name="rate" placeholder="fish in day" class="form-modal" type="number">
+
+                <textarea class="form-modal" placeholder="Description" name="description" id="" cols="30" rows="10"></textarea>
+
+                <div class="milk-container"> 
+                    <p class="milk-text">Like milks ?</p>
+                    <input name ="favorite" id="milk" class="form-modal" type="checkbox">
+                </div>
+                <button class="btn">Тык</button>
+                <button data-btnClose class="btn-close">╳</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-Edit hidden">
+        <div class="edit-container">
+            <form action="" name="catsEditForm" class="editForm">
+                
+                <input class="editInput form-modal" name="name" placeholder="Edit Name" type="text">
+                <input class="editInput form-modal" name="age" placeholder="Edit age" type="number">
+                <input class="editInput form-modal" name="rate" placeholder="Edit fish" type="text">
+                <input class="editInput form-modal" name="image" placeholder="Edit URL" type="text">
+                <textarea class="editInput form-modal" name="description" placeholder="Edit description" id="" cols="30" rows="10"></textarea>
+
+                <div class="edit-milk milk-container"> 
+                    <p class="milk-text">Like milks ?</p>
+                    <input name ="favorite" id="milk" class="form-modal" type="checkbox">
+                </div>
+
+                <button class="btn">Тык</button>
+                <button data-edBtnClose class="btn-close">╳</button>
+
+            </form>
+        </div>
+    </div>
+
+<script defer src ="api.js"></script>
+<script defer src ="Index.js"></script>
+</body>
+</html>

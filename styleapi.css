@@ -1,0 +1,283 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url(img/163884-virus-koronavirus-covid_19-kot-kotenok-3840x2160.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1800px;
+    background-color: rgb(84, 86, 86, 0.8);
+    padding-bottom: 50px;
+}
+.container h2 {
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    margin: 10px 0px 10px 0px;
+    
+}
+.wraper {
+    display: flex;
+    justify-content: center;
+    max-width: 1900px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 20px;
+}
+.card {
+    margin: 10px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 2px black;
+    height: 520px;
+    width: 450px;
+    background-color: rgb(185, 181, 181);
+}
+
+.imageCat {
+    width: 400px;
+    height: 250px;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid black;
+    text-align: center;
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+.imageCat:hover {
+    scale: 1.1;
+    transition: 1s;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+.card-title{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 900;
+    margin: 20px 0px 30px 0px;
+    cursor: default;
+}
+.card-description {
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    cursor: default;
+}
+.btn-card {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    padding: 10px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 0px;
+    transition: 1s;
+    font-size: 20px;
+    box-shadow: 1px 1px 22px 1px;
+}
+.btn:hover {
+    background: rgb(143,8,152);
+    background: linear-gradient(140deg, rgba(143,8,152,1) 0%, rgba(0,212,255,1) 100%);
+    transition: 1s;
+    color: azure;
+    box-shadow: 1px 1px 22px 1px white;
+    
+}
+.show {
+    background-color: aqua;
+}
+.delete {
+    background-color: brown;
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+}
+.ad button {
+    position: fixed;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    left: 20px;
+    top: 20px;
+    box-shadow: 1px 1px 5px 1px;
+}
+.ad button:hover {
+    box-shadow: inset 1px 1px 5px 1px;
+}
+
+.modalErr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(234, 194, 33, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imgErr {
+    border-radius: 25%;
+    opacity: 0.8;
+}
+
+.modal-container {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0,0.9);
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    
+}
+.modal-wrapper{
+    width: 400px;
+    height: 540px;
+    background-color: gray;
+    border-radius: 25px;
+    margin: 150px auto;
+    border: none;
+    position: relative;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form-modal {
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 300px;
+    height: 50px;
+    border: 0px;
+    
+}
+.btn-close {
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 10px;;
+    border: none;
+    background-color: red;
+    border: 1px solid gray;
+}
+.milk-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.milk-text {
+    flex-basis: 70%;
+    margin: 15px 0px 0px 60px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+#milk {
+    flex-basis: 50%;
+    margin-right: 50px;
+    
+}
+.hidden {
+    display: none;
+}
+
+.modal-show {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.show-container {
+    width: 1200px;
+    display: flex;
+    position: relative;
+    background-color: rgb(150, 146, 171);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px 1px;
+    top: 20%;
+    left: 20%;
+    
+}
+.show-image {
+    flex-basis: 45%;
+}
+.current-image {
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.show-desription {
+    flex-basis: 55%;
+    margin-left: 25px;
+}
+.catName {
+    display: flex;
+}
+.catAge {
+    display: flex;
+}
+.catDescription #currentDesc {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+}
+.desText {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    cursor: default;
+}
+.dataText {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-left: 15px;
+    cursor: default;
+}
+
+.edit-container {
+    background-color: rgb(113, 140, 169);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    bottom: 15%;
+    left: 45%;
+}
+.editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
